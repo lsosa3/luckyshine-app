@@ -1,5 +1,9 @@
-# Welcome to Secret server!
-Secret server implementation. The secret server can be used to store and share secrets using a **random generated URL**. But the secret can be read only a limited number of times after that it will expire and won’t be available. The secret may have a **TTL** (Time to live). After the expiration time the secret won’t be available anymore.
+# Welcome to LuckyShine!
+LuckyShine is a game where users can collect treasures in a given latitude and longitude. Every
+treasure that is collected will have points based on the monetary value. A treasure may have
+more than one money value, it depends on the user’s luck. Lucky users may get the highest
+money from the treasure that has been collected.
+
 
 ## Install
 
