@@ -7,7 +7,7 @@ class TreasureController {
     getTreasure = async (req, res, next) => {
         const treasure = await TreasureModel.find({ latitude: req.params.latitude, longitude: req.params.longitude });
 
-        if (!treasure) {
+        if ((!treasure) || (treasure.length == 0)) {
             throw new HttpException(404, 'treasure not found');
         }
 
@@ -17,7 +17,7 @@ class TreasureController {
     getTreasureWithPrizeValue = async (req, res, next) => {
         const treasure = await TreasureModel.findWithPrizeValue({ latitude: req.params.latitude, longitude: req.params.longitude, amt: req.params.prize_value });
 
-        if (!treasure) {
+        if ((!treasure) || (treasure.length == 0)) {
             throw new HttpException(404, 'treasure not found');
         }
 
